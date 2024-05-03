@@ -1,12 +1,11 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
-import Profile from './Profile';
 
-export default function Home({Navigation}) {
+export default function Profile({navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <TouchableOpacity onPress={() => Navigation.Navigate('Profile')}>
-        <Text>Home Screen</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Laporan')}>
+        <Text>Profile Screen</Text>
       </TouchableOpacity>
     </View>
   );
