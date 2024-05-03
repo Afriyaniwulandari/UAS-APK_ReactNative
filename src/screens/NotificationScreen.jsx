@@ -4,7 +4,7 @@ import React from 'react';
 export default function NotificationScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Notifikasi Screen</Text>
+      <Text> Layar Notifikasi </Text>
     </View>
   );
 }

@@ -4,8 +4,8 @@ import React from 'react';
 export default function Home({navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-        <Text>Home Screen</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Profil')}>
+        <Text>Layar Beranda</Text>
       </TouchableOpacity>
     </View>
   );

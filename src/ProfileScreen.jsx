@@ -5,7 +5,7 @@ export default function Profile({navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <TouchableOpacity onPress={() => navigation.navigate('Laporan')}>
-        <Text>Profile Screen</Text>
+        <Text>Layar Profil</Text>
       </TouchableOpacity>
     </View>
   );

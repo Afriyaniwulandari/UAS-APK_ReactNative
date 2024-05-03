@@ -4,7 +4,7 @@ import React from 'react';
 export default function SettingsScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Setting Screen</Text>
+      <Text>Layar Pengaturan</Text>
     </View>
   );
 }
