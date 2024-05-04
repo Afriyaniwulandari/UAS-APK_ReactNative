@@ -5,7 +5,7 @@ export default function Home({navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <TouchableOpacity onPress={() => navigation.navigate('Profil')}>
-        <Text>Layar Beranda</Text>
+        <Text>Ke Profil</Text>
       </TouchableOpacity>
     </View>
   );

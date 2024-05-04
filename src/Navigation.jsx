@@ -2,11 +2,11 @@ import {StyleSheet, Text, View, Button, Settings} from 'react-native';
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../HomeScreen';
-import ProfileScreen from '../ProfileScreen';
-import LaporanScreen from '../LaporanScreen';
-import SettingsScreen from './SettingsScreen';
-import NotificationScreen from './NotificationScreen';
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/move/ProfileScreen';
+import LaporanScreen from './screens/move/LaporanScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import NotificationScreen from './screens/NotificationScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 

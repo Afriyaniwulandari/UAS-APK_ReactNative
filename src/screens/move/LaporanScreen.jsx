@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-export default function Setting() {
+export default function Laporan() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>setting Screen</Text>
+      <Text>Layar Laporan</Text>
     </View>
   );
 }
