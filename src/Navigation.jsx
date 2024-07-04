@@ -3,15 +3,15 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
-// import ProfileScreen from './screens/move/StoryListScreen';
 import LaporanScreen from './screens/move/LaporanScreen';
 import SettingsScreen from './screens/SettingsScreen';
-// import NotificationScreen from './screens/StoryDetailScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import StoryListScreen from './screens/move/StoryListScreen';
 import StoryDetailScreen from './screens/StoryDetailScreen';
+
 const Stack = createNativeStackNavigator();
+
 const Tab = createBottomTabNavigator();
 
 function Navigation() {
@@ -44,7 +44,7 @@ export function Tab1() {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Pengaturan"
         component={SettingsScreen}
         options={{
@@ -52,8 +52,8 @@ export function Tab1() {
             <FontAwesome5 name="cogs" size={size} color={color} />
           ),
         }}
-      />
-      <Tab.Screen
+      /> */}
+      {/* <Tab.Screen
         name="Notifikasi"
         component={StoryListScreen}
         options={{
@@ -61,7 +61,7 @@ export function Tab1() {
             <FontAwesome5 name="bell" size={size} color={color} />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 }

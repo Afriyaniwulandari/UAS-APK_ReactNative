@@ -1,16 +1,5 @@
-import {
-  View,
-  Text,
-  Button,
-  TouchableOpacity,
-  StatusBar,
-  Image,
-  StyleSheet,
-} from 'react-native';
-// import {useState} from 'react';
 import React from 'react';
-// import React from 'react';
-// import {Text, Button, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
@@ -19,14 +8,22 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Kumpulan Dongeng Pilihan</Text>
-      <Button
-        title="Cerita Dongeng"
-        onPress={() => navigation.navigate('StoryList', {category: 'dongeng'})}
-      />
-      <Button
-        title="Cerita Rakyat"
-        onPress={() => navigation.navigate('StoryList', {category: 'rakyat'})}
-      />
+      <View style={styles.row}>
+        <TouchableOpacity
+          style={styles.box}
+          onPress={() =>
+            navigation.navigate('StoryList', {category: 'dongeng'})
+          }>
+          <Text style={styles.boxText}>Cerita Dongeng</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.box}
+          onPress={() =>
+            navigation.navigate('StoryList', {category: 'rakyat'})
+          }>
+          <Text style={styles.boxText}>Cerita Rakyat</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -39,10 +36,33 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    marginBottom: 20,
+    marginBottom: 25,
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  box: {
+    width: 150, // Ukuran kotak (lebar)
+    height: 150, // Ukuran kotak (tinggi)
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    backgroundColor: '#f9f9f9', // Warna latar belakang kotak
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  boxText: {
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 
-// export default HomeScreen;
-
-export default function Home({navigation}) {}
+export default HomeScreen;

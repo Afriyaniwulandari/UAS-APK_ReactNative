@@ -1,10 +1,39 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
-export default function StoryDetailScreen() {
+const StoryScreen = ({route}) => {
+  const {storyId} = route.params;
+
+  // Dummy data for now
+  const story = {
+    id: storyId,
+    title: 'Cerita Contoh',
+    content: 'Ini adalah isi cerita contoh.',
+  };
+
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text> Layar Notifikasi </Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>{story.title}</Text>
+      <Text style={styles.content}>{story.content}</Text>
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  content: {
+    fontSize: 18,
+  },
+});
+
+export default StoryScreen;
