@@ -1,10 +1,5 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+import {View, Text, Switch, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+// import React from 'react';
 
-export default function SettingsScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Layar Pengaturan</Text>
-    </View>
-  );
-}
+export default function SettingsScreen() {}
