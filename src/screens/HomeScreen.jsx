@@ -14,7 +14,7 @@ const HomeScreen = () => {
           onPress={() =>
             navigation.navigate('StoryList', {category: 'dongeng'})
           }>
-          <Text style={styles.boxText}>Cerita Dongeng</Text>
+          <Text style={styles.boxText}>Dongeng Binatang</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.box}
@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   box: {
-    width: 150, // Ukuran kotak (lebar)
-    height: 150, // Ukuran kotak (tinggi)
-    margin: 10,
+    width: 125, // Ukuran kotak (lebar)
+    height: 125, // Ukuran kotak (tinggi)
+    margin: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 20,
     borderColor: '#ccc',
     borderWidth: 1,
     backgroundColor: '#f9f9f9', // Warna latar belakang kotak
