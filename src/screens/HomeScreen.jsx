@@ -29,7 +29,7 @@ const HomeScreen = () => {
           <View style={styles.categoryContainer}>
             <Image
               style={styles.categoryImage}
-              source={require('../images/db.jpg')}
+              source={require('../images/rakyat.webp')}
             />
             <Text style={styles.boxText}>Cerita Rakyat</Text>
           </View>
