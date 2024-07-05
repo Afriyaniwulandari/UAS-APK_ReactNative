@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
@@ -8,6 +8,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Kumpulan Dongeng Pilihan</Text>
+      <Image style={styles.logo} />
       <View style={styles.row}>
         <TouchableOpacity
           style={styles.box}
