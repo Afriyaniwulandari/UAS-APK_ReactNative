@@ -7,22 +7,32 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Image style={styles.logo} source={require('../images/love.png')} />
       <Text style={styles.title}>Kumpulan Dongeng Pilihan</Text>
-      <Image style={styles.logo} />
       <View style={styles.row}>
         <TouchableOpacity
-          style={styles.box}
           onPress={() =>
             navigation.navigate('StoryList', {category: 'dongeng'})
           }>
-          <Text style={styles.boxText}>Dongeng Binatang</Text>
+          <View style={styles.categoryContainer}>
+            <Image
+              style={styles.categoryImage}
+              source={require('../images/db.jpg')}
+            />
+            <Text style={styles.boxText}>Dongeng Binatang</Text>
+          </View>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.box}
           onPress={() =>
             navigation.navigate('StoryList', {category: 'rakyat'})
           }>
-          <Text style={styles.boxText}>Cerita Rakyat</Text>
+          <View style={styles.categoryContainer}>
+            <Image
+              style={styles.categoryImage}
+              source={require('../images/db.jpg')}
+            />
+            <Text style={styles.boxText}>Cerita Rakyat</Text>
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -35,34 +45,36 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  logo: {
+    width: 150,
+    height: 150,
+    marginBottom: 20,
+  },
   title: {
     fontSize: 24,
     marginBottom: 25,
+    color: 'black',
   },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+  },
+  categoryContainer: {
     alignItems: 'center',
   },
-  box: {
-    width: 125, // Ukuran kotak (lebar)
-    height: 125, // Ukuran kotak (tinggi)
-    margin: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
+  categoryImage: {
+    width: 100,
+    height: 100,
+    marginBottom: 10,
     borderRadius: 20,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    backgroundColor: '#f9f9f9', // Warna latar belakang kotak
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
-    shadowOffset: {width: 0, height: 2},
-    shadowRadius: 5,
-    elevation: 5,
   },
   boxText: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'center',
   },
 });
 

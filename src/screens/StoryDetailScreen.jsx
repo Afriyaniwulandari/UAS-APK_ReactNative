@@ -7,10 +7,12 @@ const StoryDetail = () => {
   const {story} = route.params;
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.title}>{story.title}</Text>
-      <Text style={styles.content}>{story.content}</Text>
-    </ScrollView>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <Text style={styles.content}>{story.content}</Text>
+      </ScrollView>
+    </View>
   );
 };
 
@@ -22,9 +24,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     marginBottom: 20,
+    color: 'black',
+  },
+  scrollViewContent: {
+    paddingBottom: 16,
   },
   content: {
     fontSize: 18,
+    textAlign: 'justify',
+    color: 'black',
   },
 });
 

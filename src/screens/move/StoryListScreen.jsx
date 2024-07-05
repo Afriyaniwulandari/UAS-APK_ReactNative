@@ -1,6 +1,13 @@
 // src/screens/StoryList.js
 import React from 'react';
-import {View, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import stories from '../../data/stories';
 
