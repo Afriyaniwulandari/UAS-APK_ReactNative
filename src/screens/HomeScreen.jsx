@@ -7,7 +7,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={require('../images/fabel.jpg')} />
+      <Image style={styles.logo} source={require('../images/paper.jpg')} />
       <Text style={styles.title}>Kumpulan Dongeng Pilihan</Text>
       <View style={styles.row}>
         <TouchableOpacity
@@ -46,13 +46,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 400,
-    height: 350,
-    marginBottom: 20,
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     marginBottom: 25,
+    fontWeight: 'bold',
     color: 'black',
   },
   row: {
