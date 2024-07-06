@@ -54,6 +54,7 @@ const StoryDetail = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#dee3f1',
     padding: 16,
   },
   title: {
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
   },
   content: {
-    fontSize: 18,
+    fontSize: 20,
     textAlign: 'justify',
     color: 'black',
   },

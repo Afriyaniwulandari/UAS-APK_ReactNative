@@ -1,4 +1,3 @@
-// src/screens/StoryList.js
 import React from 'react';
 import {
   View,
@@ -10,6 +9,7 @@ import {
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import stories from '../../data/stories';
+import Foto from '../../images/db.jpg';
 
 const StoryList = () => {
   const navigation = useNavigation();
@@ -41,22 +41,26 @@ const StoryList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    padding: 20,
   },
   title: {
     fontSize: 24,
+    fontWeight: 'bold',
+    color: 'black',
     marginBottom: 20,
   },
   item: {
-    padding: 16,
+    padding: 15,
     marginBottom: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    backgroundColor: '#fff',
+    borderRadius: 100,
+    borderWidth: 5,
+    borderColor: '#345c78',
+    backgroundColor: '#d598a3',
   },
   itemText: {
-    fontSize: 18,
+    fontSize: 20,
+    color: 'black',
+    textAlign: 'center',
   },
 });
 
