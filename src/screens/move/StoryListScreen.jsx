@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
+  ImageBackground,
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import stories from '../../data/stories';
