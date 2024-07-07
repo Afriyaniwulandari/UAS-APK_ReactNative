@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  ImageBackground,
+  Image,
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import stories from '../../data/stories';
@@ -28,14 +28,17 @@ const StoryList = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
-        Cerita {category === 'dongeng' ? 'Dongeng' : 'Rakyat'}
-      </Text>
-      <FlatList
-        data={stories[category]}
-        renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
-      />
+      <Image style={styles.logo} source={require('../../images/foto.jpg')} />
+      <View style={{paddingTop: 30, marginTop: 30}}>
+        <Text style={styles.title}>
+          Cerita {category === 'dongeng' ? 'Dongeng' : 'Rakyat'}
+        </Text>
+        <FlatList
+          data={stories[category]}
+          renderItem={renderItem}
+          keyExtractor={item => item.id.toString()}
+        />
+      </View>
     </View>
   );
 };
@@ -43,21 +46,31 @@ const StoryList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logo: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    position: 'absolute',
   },
   title: {
-    fontSize: 24,
+    textAlign: 'center',
+    fontSize: 25,
     fontWeight: 'bold',
     color: 'black',
     marginBottom: 20,
   },
   item: {
     padding: 15,
+
     marginBottom: 10,
     borderRadius: 100,
     borderWidth: 5,
     borderColor: '#345c78',
     backgroundColor: '#d598a3',
+    width: 210,
   },
   itemText: {
     fontSize: 20,
