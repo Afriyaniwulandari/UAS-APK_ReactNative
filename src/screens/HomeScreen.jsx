@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   title: {
-    fontSize: 26,
+    fontSize: 25,
     marginBottom: 25,
     fontWeight: 'bold',
     color: 'black',
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   categoryImage: {
-    width: 100,
+    width: 110,
     height: 100,
     marginBottom: 10,
     borderRadius: 20,

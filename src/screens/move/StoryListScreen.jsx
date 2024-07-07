@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import stories from '../../data/stories';
-import Foto from '../../images/db.jpg';
 
 const StoryList = () => {
   const navigation = useNavigation();
@@ -20,7 +19,9 @@ const StoryList = () => {
     <TouchableOpacity
       style={styles.item}
       onPress={() => navigation.navigate('StoryDetail', {story: item})}>
-      <Text style={styles.itemText}>{item.title}</Text>
+      <View style={styles.itemContent}>
+        <Text style={styles.itemText}>{item.title}</Text>
+      </View>
     </TouchableOpacity>
   );
 
